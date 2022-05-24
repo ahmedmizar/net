@@ -1,0 +1,85 @@
+.side-nav {
+  box-shadow: 0px 8px 10px #57575724;
+  border-radius: 5px;
+  ul {
+    .ant-menu-item {
+      height: 48px;
+      line-height: 48px;
+      margin: 0 !important;
+      padding: 0 20px;
+      color: #000000de;
+
+      &:first-of-type {
+        margin-top: 0px !important;
+      }
+      &::after {
+        position: absolute;
+        left: 0;
+        width: 10px;
+        height: 48px;
+        border-right: none;
+        background: #e3cca26b;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0;
+      }
+    }
+
+    .ant-menu-item-selected {
+      background-color: #f7f0e4;
+
+      &::after {
+        opacity: 1;
+      }
+
+      span {
+        &:last-of-type {
+          font-family: "TajawalMedium";
+          font-size: 16px;
+        }
+      }
+      svg {
+        path {
+          &:last-of-type {
+            fill: #f05f79;
+          }
+        }
+      }
+      svg:is(#service) {
+        path {
+          fill: #f05f79;
+        }
+      }
+    }
+    .ant-menu-title-content {
+      display: flex;
+      align-items: center;
+      .sid-icon {
+        background: #98989814;
+        width: 24px;
+        height: 24px;
+        display: block;
+        line-height: 24px;
+        text-align: center;
+        border-radius: 8px;
+        position: relative;
+        margin-right: 8px;
+        [dir="rtl"] & {
+          margin-right: 0;
+          margin-left: 8px;
+        }
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+      span {
+      }
+    }
+  }
+}
+.ant-menu.ant-menu-inline-collapsed > .ant-menu-item .sid-icon + span {
+  opacity: 0;
+}
